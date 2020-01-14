@@ -21,12 +21,12 @@ namespace 包装后段测试
                     {
                         if (sendmes(uwip))      //prom or lemes
                         {
-                            select_or_send.UapdateMySqlteauto("teauto.autoscanlabel", "ROBOT");
+                            UapdateMySqlteauto("teauto.autoscanlabel", "ROBOT");
                             Thread.Sleep(2500);
                         }
                         else
                         {
-                            select_or_send.UapdateMySqlteauto("teauto.autoscanlabel", "ROBOTCANCEL");
+                            UapdateMySqlteauto("teauto.autoscanlabel", "ROBOTCANCEL");
                             Thread.Sleep(1500);
                         }
                     }
