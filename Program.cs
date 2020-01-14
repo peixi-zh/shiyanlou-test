@@ -181,7 +181,7 @@ namespace 包装后段测试
                     //Console.WriteLine(connResult.IsCompleted);
                     if (!connResult.IsCompleted)        //网络ip不可达
                     {
-                        Console.WriteLine(cdevice.Dvid + " 网络IP:" + cdevice.Ip + " 连接不可到达!:" + DateTime.Now.ToString());
+                        Console.WriteLine(cdevice.Dvid + " 网络IP:" + cdevice.Ip + " 连接不可到达!:" + "\t" +"端口号为" + port + "\t" + DateTime.Now.ToString());
                         Thread.Sleep(300);
                         continue;
                     }
@@ -189,13 +189,13 @@ namespace 包装后段测试
                     {
                         if (!cdevice.Skt.Connected)      //socket连接失败
                         {
-                            Console.WriteLine(cdevice.Dvid + " 网络IP:" + cdevice.Ip + " Socket连接失败!:" + DateTime.Now.ToString());
+                            Console.WriteLine(cdevice.Dvid + " 网络IP:" + cdevice.Ip + " Socket连接失败!:" + "\t" + "端口号为" + port + "\t" + DateTime.Now.ToString());
                             Thread.Sleep(300);
                             continue;
                         }
                         else            //socket连接成功
                         {
-                            Console.WriteLine(cdevice.Dvid + " 网络IP:" + cdevice.Ip + " Network Socket Connect Sucess!:" + DateTime.Now.ToString());     //网络连接成功
+                            Console.WriteLine(cdevice.Dvid + " 网络IP:" + cdevice.Ip + " Network Socket Connect Sucess!:" + "\t" + "端口号为" + port + "\t" + DateTime.Now.ToString());     //网络连接成功
                             if (cdevice.Dvid.Equals("robot_catonlabel"))
                             {
                                 skttiebiao = cdevice;
