@@ -1,0 +1,26 @@
+
+ 2017/4/19 11:56:04System.UnauthorizedAccessException: 对端口“COM12”的访问被拒绝。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 包装后段测试.Program.Main(String[] args) 位置 D:\WANSHANW\WWS\C#CODE\LIPC工控设备\2017\设备监控0419\包装后段测试\Program.cs:行号 131
+ 2017/5/2 13:42:01System.IO.IOException: 端口“COM7”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 包装后段测试.Program.Main(String[] args) 位置 D:\WANSHANW\WWS\C#CODE\LIPC工控设备\2017\设备监控0502\包装后段测试\Program.cs:行号 185
+ 2017/5/3 19:08:45System.IO.IOException: 端口“COM7”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 包装后段测试.Program.Main(String[] args) 位置 D:\WANSHANW\WWS\C#CODE\LIPC工控设备\2017\设备监控0503\包装后段测试\Program.cs:行号 186
+ 2017/5/3 19:46:41System.IO.IOException: 端口“COM7”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 包装后段测试.Program.Main(String[] args) 位置 D:\WANSHANW\WWS\C#CODE\LIPC工控设备\2017\设备监控0503\包装后段测试\Program.cs:行号 186
+ 2017/5/11 16:44:14System.IO.IOException: 端口“COM7”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 包装后段测试.Program.Main(String[] args) 位置 C:\Users\wanshanw\Desktop\设备监控\设备监控0511\包装后段测试\Program.cs:行号 186
