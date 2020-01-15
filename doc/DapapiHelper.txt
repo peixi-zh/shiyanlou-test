@@ -1,0 +1,48 @@
+﻿以数字形式点亮电子标签
+AB_LED_Status(1,(short)-1, 0, Convert.ToByte(lc));第一个参数是控制器的ID，第二个参数是标签的ID，第三个参数是颜色 第四个常值1。  1 红色 2 绿色 3黄色
+AB_LB_DspNum(1,-1, 10, 0, 0)   控制器ID，标签ID，数量，三四个参数一般为0
+ 
+以字符形式点亮电子标签
+AB_LB_DspStr(1,-1, 10, 0, 0);
+控制器ID，标签ID，数量（字符形式），三四个参数一般为0
+ 
+熄灭AT506总数显示
+AB_LB_DspStr(1,-1, "", 0, -3);
+ 控制器ID，标签ID，后三个参数参照例子。
+
+点亮区域灯
+AB_LB_DspStr(1 ,-1, "00000", 0, 0);
+控制器ID，标签ID，数量（字符形式），三四个参数一般为0
+ 
+点亮完成器（绿色按钮）
+AB_LB_DspStr(1,1, "88888", 0, 300) 控制器ID，标签ID，后三个参数参照例子。  
+AB_LED_Status(1 ,-1, 0, 1);  控制器ID，标签ID，后两个参数参照例子。
+AB_BUZ_On(1,-1, 1);//使完成器叫起来    控制器ID，标签ID，后一个参数参照例子。
+              
+ 
+开启盘点模式
+AB_TAG_CountDigit(1,1, 5)   控制器ID，标签ID，后一个参数参照例子。
+AB_LB_SetMode(1,1, 1)   控制器ID，标签ID，后一个参数参照例子。
+
+关闭盘点模式
+AB_TAG_CountDigit(1,1, 5)  控制器ID，标签ID，后一个参数参照例子。
+AB_LB_SetMode(1,1, 0)  控制器ID，标签ID，后一个参数参照例子。
+ 
+
+设置标签为摘自模式启动下翻键，禁用上翻键，控制器连接成功后运行一次则OK
+AB_TAG_mode(1,252, 1, 127);// 控制器ID，后三个参数参照例子。 
+
+接收控制返回的数据
+AB_Tag_RcvMsg(ref id, ref ledaddr, ref RcvCmd, ref msgType, bdata, ref dataCnt);
+RcvCmd
+状态说明，6成功，7初始化，15盘点摸试，13电子标签卡健，12电子标签没点亮成功，10标签不存在
+byte[] bdata = new byte[200];
+接收的数据字节，放在该变量中
+dataCnt = 200;  长度
+msgType = 0;
+ledaddr,    标签地址
+id  	    控制器ID
+	
+点亮订单显示器
+AB_AHA_DspStr(1,-1, data, 1, 1);     控制器ID，标签ID，数据，后两个参数参照例子。
+          
