@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Drawing;
 using System.IO;
-using System.Net;
-using System.Net.NetworkInformation;
-using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -16,7 +12,7 @@ namespace 包装队列显示
         public Frm()
         {
             InitializeComponent();
-            Control.CheckForIllegalCrossThreadCalls = false;     //允许线程访问UI控件
+            CheckForIllegalCrossThreadCalls = false;     //允许线程访问UI控件
         }
 
         const int BURFERSIZE = 128;     //接受的数据缓冲区大小
