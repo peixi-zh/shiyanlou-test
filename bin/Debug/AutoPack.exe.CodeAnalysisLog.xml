@@ -1,0 +1,1446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="d:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe">
+   <Modules>
+    <Module Name="autopack.exe">
+     <Messages>
+      <Message TypeName="MarkWindowsFormsEntryPointsWithStaThread" Category="Microsoft.Usage" CheckId="CA2232" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="75">使用 STAThreadAttribute 来标记程序集 'AutoPack.exe' 中的入口点方法 'Program.Main(string[])'。</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Apiabpick">
+       <Types>
+        <Type Name="Abpick" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">在 'Abpick' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员: 'TextBox', 'Timer'。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="Dapapi" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#AB_3W_LB_DspNum(System.Int32,System.Int16,System.String,System.String,System.Int32,System.Byte,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_3W_LB_DspNum(int, short, string, string, int, byte, int)'。</Issue>
+            </Message>
+            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Row' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+            <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Col' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_AHA_BUZ_On(System.Int32,System.Int16,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_AHA_BUZ_On(int, short, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_AHA_ClrDsp(System.Int32,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_AHA_ClrDsp(int, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_AHA_DspStr(System.Int32,System.Int16,System.String,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_AHA_DspStr(int, short, string, byte, byte)'。</Issue>
+            </Message>
+            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Disp_Str' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_AHA_LED_Dsp(System.Int32,System.Int16,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_AHA_LED_Dsp(int, short, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_AHA_ReDsp(System.Int32,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_AHA_ReDsp(int, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_All_Simple(System.Int32,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_All_Simple(int, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_API_Close()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_API_Close()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_API_Open()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_API_Open()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_AV_LB_DspNum(System.Int32,System.Int16,System.Int32,System.Byte,System.Byte,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_AV_LB_DspNum(int, short, int, byte, byte, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_BUZ_On(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_BUZ_On(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_CLTAG_DspAddr(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_CLTAG_DspAddr(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_CLTAG_SetAddr(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_CLTAG_SetAddr(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_AllStatus(System.Byte&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_AllStatus(ref byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_Close(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_Close(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_Cnt()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_Cnt()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_Conf(System.Int32,System.Int32,System.Byte,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_Conf(int, int, byte, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_DelConf(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_DelConf(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_ID2Ndx(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_ID2Ndx(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_InsConf(System.Int32,System.Byte,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_InsConf(int, byte, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_Ndx2ID(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_Ndx2ID(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_Open(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_Open(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_RcvButton(System.Byte[],System.Int16&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_RcvButton(byte[], ref short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_RcvMsg(System.Int32,System.Byte[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_RcvMsg(int, byte[])'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_RcvReady(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_RcvReady(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_SetPollRang(System.Int32,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_SetPollRang(int, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_SndMsg(System.Int32,System.Text.StringBuilder)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_SndMsg(int, StringBuilder)'。</Issue>
+            </Message>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Data' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_Status(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_Status(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_TagDiag(System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_TagDiag(int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_GW_UpdConf(System.Int32,System.Byte,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_GW_UpdConf(int, byte, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LB_DspAddr(System.Int32,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LB_DspAddr(int, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LB_DspNum(System.Int32,System.Int16,System.Int32,System.Byte,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LB_DspNum(int, short, int, byte, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LB_DspStr(System.Int32,System.Int16,System.String,System.Byte,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LB_DspStr(int, short, string, byte, short)'。</Issue>
+            </Message>
+            <Message Id="2" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Dsp_Str' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LB_SetLock(System.Int32,System.Int16,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LB_SetLock(int, short, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LB_SetMode(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LB_SetMode(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LB_Simulate(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LB_Simulate(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LED_Dsp(System.Int32,System.Int16,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LED_Dsp(int, short, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_LED_Status(System.Int32,System.Int16,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_LED_Status(int, short, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_Melody_On(System.Int32,System.Int16,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_Melody_On(int, short, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_Melody_Volume(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_Melody_Volume(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_SNR_AutoRange(System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_SNR_AutoRange(int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_SNR_AutoWarn(System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_SNR_AutoWarn(int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_SNR_Control(System.Int32,System.Int32,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_SNR_Control(int, int, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_SNR_DetectTime(System.Int32,System.Int32,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_SNR_DetectTime(int, int, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_SNR_ResidualDSP(System.Int32,System.Int32,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_SNR_ResidualDSP(int, int, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_SNR_SetRange(System.Int32,System.Int32,System.Byte,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_SNR_SetRange(int, int, byte, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_TAG_ButtonDelay(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_TAG_ButtonDelay(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_Tag_ChgAddr(System.Int32,System.Int16,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_Tag_ChgAddr(int, short, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_TAG_Complete(System.Int32,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_TAG_Complete(int, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_TAG_CountDigit(System.Int32,System.Int16,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_TAG_CountDigit(int, short, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_TAG_mode(System.Int32,System.Int16,System.Int16,System.Byte)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_TAG_mode(int, short, short, byte)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_Tag_RcvMsg(System.Int32&amp;,System.Int16&amp;,System.Int16&amp;,System.Int16&amp;,System.Byte[],System.Int16&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_Tag_RcvMsg(ref int, ref short, ref short, ref short, byte[], ref short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AB_TAG_Reset(System.Int32,System.Int16)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.AB_TAG_Reset(int, short)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DiscnnSrv(System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.DiscnnSrv(StringBuilder, int)'。</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">为了降低安全风险，请将参数 'ip' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#INITClient(System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Dapapi.INITClient(StringBuilder, int)'。</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="ParameterImplicitAnsi" Certainty="75" Level="Error">为了降低安全风险，请将参数 'ip' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="包装后段测试">
+       <Types>
+        <Type Name="Autoit" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#AU3_AutoItSetOption(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_AutoItSetOption(string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_BlockInput(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_BlockInput(int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_BlockInput(int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_BlockInput。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_CDTray(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_CDTray(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_CDTray(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_CDTray。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ClipGet(System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ClipGet(StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ClipPut(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ClipPut(string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlClick(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlClick(string, string, string, string, int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlCommand(System.String,System.String,System.String,System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlCommand(string, string, string, string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlDisable(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlDisable(string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlEnable(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlEnable(string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlFocus(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlFocus(string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlGetFocus(System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlGetFocus(string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlGetHandle(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlGetHandle(string, string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlGetPosHeight(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlGetPosHeight(string, string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_ControlGetPosHeight(string, string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_ControlGetPosHeight。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlGetPosWidth(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlGetPosWidth(string, string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_ControlGetPosWidth(string, string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_ControlGetPosWidth。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlGetPosX(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlGetPosX(string, string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_ControlGetPosX(string, string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_ControlGetPosX。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlGetPosY(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlGetPosY(string, string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_ControlGetPosY(string, string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_ControlGetPosY。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlGetText(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlGetText(string, string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlHide(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlHide(string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlListView(System.String,System.String,System.String,System.String,System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlListView(string, string, string, string, string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlMove(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlMove(string, string, string, int, int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlSend(System.String,System.String,System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlSend(string, string, string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlSetText(System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlSetText(string, string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlShow(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlShow(string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ControlTreeView(System.String,System.String,System.String,System.String,System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ControlTreeView(string, string, string, string, string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_DriveMapAdd(System.String,System.String,System.Int32,System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_DriveMapAdd(string, string, int, string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_DriveMapDel(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_DriveMapDel(string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_DriveMapGet(System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_DriveMapGet(string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_error()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_error()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_IniDelete(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_IniDelete(string, string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_IniDelete(string, string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_IniDelete。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_IniRead(System.String,System.String,System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_IniRead(string, string, string, string, StringBuilder, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_IniRead(string, string, string, string, StringBuilder, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_IniRead。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_Init()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_Init()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_IniWrite(System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_IniWrite(string, string, string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_IniWrite(string, string, string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_IniWrite。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_IsAdmin()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_IsAdmin()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseClick(System.String,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseClick(string, int, int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseClickDrag(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseClickDrag(string, int, int, int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseDown(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseDown(string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseGetCursor()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseGetCursor()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseGetPosX()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseGetPosX()'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_MouseGetPosX()' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_MouseGetPosX。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseGetPosY()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseGetPosY()'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_MouseGetPosY()' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_MouseGetPosY。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseMove(System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseMove(int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseUp(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseUp(string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_MouseWheel(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_MouseWheel(string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_Opt(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_Opt(string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_PixelChecksum(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_PixelChecksum(int, int, int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_PixelGetColor(System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_PixelGetColor(int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_PixelSearch(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_PixelSearch(int, int, int, int, int, int, int, int[])'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ProcessClose(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ProcessClose(string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ProcessExists(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ProcessExists(string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ProcessSetPriority(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ProcessSetPriority(string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ProcessWait(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ProcessWait(string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ProcessWaitClose(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ProcessWaitClose(string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RegDeleteKey(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RegDeleteKey(string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_RegDeleteKey(string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_RegDeleteKey。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RegDeleteVal(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RegDeleteVal(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_RegDeleteVal(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_RegDeleteVal。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RegEnumKey(System.String,System.Int32,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RegEnumKey(string, int, StringBuilder, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_RegEnumKey(string, int, StringBuilder, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_RegEnumKey。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RegEnumVal(System.String,System.Int32,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RegEnumVal(string, int, StringBuilder, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_RegEnumVal(string, int, StringBuilder, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_RegEnumVal。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RegRead(System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RegRead(string, string, StringBuilder, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_RegRead(string, string, StringBuilder, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_RegRead。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RegWrite(System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RegWrite(string, string, string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_RegWrite(string, string, string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_RegWrite。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_Run(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_Run(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RunAsSet(System.String,System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RunAsSet(string, string, string, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_RunAsSet(string, string, string, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_RunAsSet。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_RunWait(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_RunWait(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_Send(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_Send(string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_SendA(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_SendA(string, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_SendA(string, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_SendA。</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'SendText' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_Shutdown(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_Shutdown(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_Sleep(System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_Sleep(int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_StatusbarGetText(System.String,System.String,System.Int32,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_StatusbarGetText(string, string, int, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_ToolTip(System.String,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_ToolTip(string, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinActivate(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinActivate(string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinActive(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinActive(string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinClose(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinClose(string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinExists(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinExists(string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetCaretPosX()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetCaretPosX()'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetCaretPosX()' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetCaretPosX。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetCaretPosY()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetCaretPosY()'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetCaretPosY()' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetCaretPosY。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetClassList(System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetClassList(string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetClientSizeHeight(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetClientSizeHeight(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetClientSizeHeight(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetClientSizeHeight。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetClientSizeWidth(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetClientSizeWidth(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetClientSizeWidth(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetClientSizeWidth。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetHandle(System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetHandle(string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetPosHeight(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetPosHeight(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetPosHeight(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetPosHeight。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetPosWidth(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetPosWidth(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetPosWidth(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetPosWidth。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetPosX(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetPosX(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetPosX(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetPosX。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetPosY(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetPosY(string, string)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinGetPosY(string, string)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinGetPosY。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetProcess(System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetProcess(string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetState(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetState(string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetText(System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetText(string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinGetTitle(System.String,System.String,System.Text.StringBuilder,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinGetTitle(string, string, StringBuilder, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinKill(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinKill(string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinMenuSelectItem(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinMenuSelectItem(string, string, string, string, string, string, string, string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinMinimizeAll()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinMinimizeAll()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinMinimizeAllUndo()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinMinimizeAllUndo()'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinMove(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinMove(string, string, int, int, int, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinSetOnTop(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinSetOnTop(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinSetState(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinSetState(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinSetTitle(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinSetTitle(string, string, string)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinSetTrans(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinSetTrans(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWait(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWait(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWaitA(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWaitA(string, string, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinWaitA(string, string, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinWaitA。</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Title' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Text' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWaitActive(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWaitActive(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWaitActiveA(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWaitActiveA(string, string, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinWaitActiveA(string, string, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinWaitActiveA。</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Title' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Text' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWaitClose(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWaitClose(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWaitCloseA(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWaitCloseA(string, string, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinWaitCloseA(string, string, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinWaitCloseA。</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Title' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Text' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWaitNotActive(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWaitNotActive(string, string, int)'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AU3_WinWaitNotActiveA(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 'Autoit.AU3_WinWaitNotActiveA(string, string, int)'。</Issue>
+            </Message>
+            <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="CriticalWarning">更正 'Autoit.AU3_WinWaitNotActiveA(string, string, int)' 的声明，使它正确地指向 'AutoItX3.dll' 中的现有入口点。当前链接到的非托管入口点的名称是 AU3_WinWaitNotActiveA。</Issue>
+            </Message>
+            <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Title' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+            <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="75" Level="Error">为了降低安全风险，请将参数 'Text' 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Program" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#InsertMySqlteauto(System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="1586">传递给 'Program.InsertMySqlteauto(string, string, int)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'tabname', 'mtsn', 'weight', 'Local2.ToString("yyyyMMddHHmmss")'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#queue_firstinsert(System.String,System.String,System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="1620">传递给 'Program.queue_firstinsert(string, string, string, int)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'tabname', 'mtsn', 'Local2.ToString("yyyyMMddHHmmss")', 'brandname', 'cartonqty', 'base.ToString()'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectMySqlMerwebMOBOM(System.String,System.String&amp;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="1469">传递给 'Program.SelectMySqlMerwebMOBOM(string, out string, out string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'mtsnfront'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectMySqlMerwebSoContry(System.String,System.String&amp;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="1513">传递给 'Program.SelectMySqlMerwebSoContry(string, out string, out string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'mo'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectMySqlTeautoSOMOCOUNTRY(System.String,System.String&amp;,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="1555">传递给 'Program.SelectMySqlTeautoSOMOCOUNTRY(string, out string, out string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'mo'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UapdateMySqlteautoPPOK(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="1722">传递给 'Program.UapdateMySqlteautoPPOK(string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'cmdinfo'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#verticalbank_insert(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="Program.cs" Line="1652">传递给 'Program.verticalbank_insert(string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'mtsn'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="select_or_send" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#UapdateMySqlteauto(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="为格式化方法提高正确的参数" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="MissingFormatItem" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="select_or_send.cs" Line="266">方法 'select_or_send.UapdateMySqlteauto(string, string)' 调用 'string.Format(string, object, object)' 并且不为参数 "2" 提供格式项。提供的格式字符串为:“"UPDATE {0} SET qty_chg_add = (qty_chg_add +1) WHERE MO =\'"”</Issue>
+            </Message>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="select_or_send.cs" Line="276">传递给 'select_or_send.UapdateMySqlteauto(string, string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'tabname', 'Local4.ToString("yyyyMMddHHmmss")', 'cmdinfo', 'Local4.ToString("yyyyMMddHHmmss")', 'Local4.ToString("yyyyMMddHHmmss")', 'Local4.ToString("yyyyMMddHHmmss")'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UapdateMySqlteauto(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2020-01-15 09:36:13Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试" File="select_or_send.cs" Line="318">传递给 'select_or_send.UapdateMySqlteauto(string, string, string)' 中的 'MySqlCommand.MySqlCommand(string, MySqlConnection)' 的查询字符串可能包含以下变量 'tabname', 'MO'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="MarkWindowsFormsEntryPointsWithStaThread" Category="Microsoft.Usage" CheckId="CA2232">
+   <Name>使用 STAThread 标记 Windows 窗体的入口点</Name>
+   <Description>引用 System.Windows.Forms 的程序集应具有 STAThreadAttribute 特性。未能应用此特性将很可能导致应用程序无法运行。Windows 窗体依赖于一些使用 STA 模型的组件。</Description>
+   <Resolution Name="Default">使用 STAThreadAttribute 来标记程序集 {1} 中的入口点方法 {0}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182351.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>将 P/Invoke 移动到 NativeMethods 类</Name>
+   <Description>此类型包含具有 DllImport 特性的成员。具有 DllImport 特性的成员应包含在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中。</Description>
+   <Resolution Name="Default">由于是 P/Invoke 方法，因此，应在名为 NativeMethods、SafeNativeMethods 或 UnsafeNativeMethods 的类中定义 {0}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400">
+   <Name>P/Invoke 入口点应该存在</Name>
+   <Description>使用 DLLImport 特性修饰的方法应指向现有的非托管入口点。任何编译时检查都无法确保那些使用 DLLImportAttribute 特性修饰的方法在所引用的非托管 dll 中实际存在。如果入口点不存在或指定的参数列表不正确，则会生成运行时异常。</Description>
+   <Resolution Name="Default">更正 {0} 的声明，使它正确地指向 {1} 中的现有入口点。当前链接到的非托管入口点的名称是 {2}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182208.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalWarning</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+   <Name>指定对 P/Invoke 字符串参数进行封送处理</Name>
+   <Description>在将字符串封送为 ANSI (在 Win9x 上为 Auto)时，某些字符可能会改变。如果启用了最佳匹配映射，则采用 Unicode 编码时显示样式不同的字符串将封送到相同的 ANSI 字符串，这可能会导致错误的安全决策。禁用最佳匹配映射会降低此风险，因为所有没有等效项的字符都将映射到“?”。另外，请注意，CharSet.Ansi 是所有字符串的默认封送设置；Unicode 封送必须显式指定为 DllImport 或 StructLayout 的 CharSet 设置，或者指定为具有 Unicode (或与系统相关的) UnmanagedType 的 MarshalAs 特性。</Description>
+   <Resolution Name="Parameter">为了降低安全风险，请将参数 {0} 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode 或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或与系统相关的编码，请设置 BestFitMapping=false；为了提高安全性，还可以设置 ThrowOnUnmappableChar=true。</Resolution>
+   <Resolution Name="ParameterImplicitAnsi">为了降低安全风险，请将参数 {0} 封送为 Unicode，方法是将 DllImport.CharSet 设置为 CharSet.Unicode，或者将该参数显式封送为 UnmanagedType.LPWStr。如果您需要将该字符串封送为 ANSI 或者与系统相关的编码，请显式指定 MarshalAs，并设置 BestFitMapping=false；为了提高安全性，还应设置 ThrowOnUnmappableChar=true。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182319.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>具有可释放字段的类型应该是可释放的</Name>
+   <Description>声明可释放成员的类型也应实现 IDisposable。如果该类型没有任何非托管资源，请不要在其上实现终结器。</Description>
+   <Resolution Name="NonBreaking">在 {0} 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员: {1}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="为格式化方法提高正确的参数" Category="Microsoft.Usage" CheckId="CA2241">
+   <Name>为格式化方法提高正确的参数</Name>
+   <Description>为 String.Format 调用提供正确的参数数量。</Description>
+   <Resolution Name="MissingFormatItem">方法 {0} 调用 {1} 并且不为参数 {2} 提供格式项。提供的格式字符串为:“{3}”</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182361.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>检查 SQL 查询是否存在安全漏洞</Name>
+   <Description>通过用户输入生成的 SQL 命令字符串容易受到 SQL 注入式攻击。Microsoft SQL Server 和其他数据库服务器支持存储过程和参数化 SQL 查询，这将降低受到注入式攻击的风险。</Description>
+   <Resolution Name="WithNonLiterals">传递给 {1} 中的 {0} 的查询字符串可能包含以下变量 {2}。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>

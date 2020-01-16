@@ -625,7 +625,6 @@ C:\Users\Administrator\Desktop\window10_sio\包装后段测试\obj\Debug\AtuoPac
 D:\onedrive\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe.config
 D:\onedrive\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe
 D:\onedrive\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.pdb
-D:\onedrive\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\obj\Debug\包装后段测试.csprojAssemblyReference.cache
 D:\onedrive\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\obj\Debug\包装后段测试.csproj.CopyComplete
 D:\onedrive\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\obj\Debug\AutoPack.exe
 D:\onedrive\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\obj\Debug\AutoPack.pdb
@@ -634,4 +633,5 @@ C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后�
 C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\obj\Debug\AutoPack.pdb
 C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe
 C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.pdb
-C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\obj\Debug\包装后段测试.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe.CodeAnalysisLog.xml
+C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe.lastcodeanalysissucceeded

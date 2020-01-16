@@ -53,17 +53,17 @@ namespace 包装后段测试
         static Cdevice[] Cdeviceobj = new Cdevice[]
         {
 
-            //new Cdevice("scanner_getweight",null,IPAddress.Parse("10.186.242.14"),false,"OK\r\n","NG\r\n")                                        //后段称重Scanner
-            //,
+            new Cdevice("scanner_getweight",null,IPAddress.Parse("10.186.242.14"),false,"OK\r\n","NG\r\n")                                        //后段称重
+            ,
             new Cdevice("robot_sealing",null,IPAddress.Parse("10.186.242.18"),false,"1,0,1,0,0,0,0,0,0,0,0,0,0,CR", "1,0,1,0,0,0,0,0,0,0,0,0,0,CR")    //贴检封robot
-            //,
-            //new Cdevice("scanner_athead",null,IPAddress.Parse("10.186.242.83"),false,"OK\r\n","NG\r\n")                                          //前段Scanner
-            //,           
-            //new Cdevice("robot_catonlabel",null,IPAddress.Parse("10.186.242.88"),false,"1,CR","2,CR")                                              //贴标robot
-           //,
-            //new Cdevice("scanner_afterlabeling",null,IPAddress.Parse("10.186.242.79"),false,"OK\r\n","NG\r\n")                                              //贴标后扫描枪校验
-            //,
-            //new Cdevice("printer",null,IPAddress.Parse("10.186.242.80"),false,"OK\r\n","NG\r\n")                                              //打印机            
+            ,
+            new Cdevice("scanner_athead",null,IPAddress.Parse("10.186.242.83"),false,"OK\r\n","NG\r\n")                                          //前段Scanner
+            ,           
+            new Cdevice("robot_catonlabel",null,IPAddress.Parse("10.186.242.88"),false,"1,CR","2,CR")                                              //贴标robot
+           ,
+            new Cdevice("scanner_afterlabeling",null,IPAddress.Parse("10.186.242.79"),false,"OK\r\n","NG\r\n")                                              //贴标后扫描枪校验
+            ,
+            new Cdevice("printer",null,IPAddress.Parse("10.186.242.80"),false,"OK\r\n","NG\r\n")                                              //打印机            
         };
 
         const int BURFERSIZE = 128;     //接受的数据缓冲区大小
@@ -79,8 +79,8 @@ namespace 包装后段测试
                 threads[i] = new Thread(ListenDevice);           //网络通信接收
                 threads[i].IsBackground = true;
                 threads[i].Start(Cdeviceobj[i]);
-                Thread.Sleep(1000);
 
+                Thread.Sleep(1000);
                 ThreadPool.QueueUserWorkItem(new WaitCallback(PingDevice), new ThreadCdevice(threads[i], Cdeviceobj[i]));    //开启设备监听线程池,在多线程各自独立线程扫描心跳，响应及时
 
                 if (Cdeviceobj[i].Dvid.Equals("scanner_athead"))           //前段卡夹打单开启  
@@ -240,6 +240,7 @@ namespace 包装后段测试
                                         #region 自动切换模式
                                         if (File.Exists(@"robotcmd.ini"))
                                         {
+                                            Console.WriteLine("发送文件信息为：" + File.ReadAllText(@"robotcmd.ini", Encoding.Default));
                                             cdevice.Skt.Send(Encoding.UTF8.GetBytes(File.ReadAllText(@"robotcmd.ini", Encoding.Default)));
                                         }
                                         else
@@ -355,7 +356,7 @@ namespace 包装后段测试
                                                 File.AppendAllText("WeightData.txt", "\r\n机器流水号:" + mtsn + "  重量不符! " + " 记录时间:" + DateTime.Now.ToString(), Encoding.Default);
                                             }
                                             Console.WriteLine("实际重量:" + weight);
-                                            InsertMySqlteauto("autoscanweight", mtsn, weight);
+                                            InsertMySqlteauto("teauto.autoscanweight", mtsn, weight);
                                             mtsn = "";
                                         }
                                     }
@@ -365,13 +366,14 @@ namespace 包装后段测试
                                 #region 入口扫描枪
                                 else if (cdevice.Dvid.Equals("scanner_athead"))   //Scanner
                                 {
+                                    Console.WriteLine("enter into head");
                                     Thread PromThreadArray = new Thread(select_or_send.selectqueue_tomesOruwip);          //IT 系统处理发送
                                     PromThreadArray.IsBackground = true;
                                     PromThreadArray.Start(null);
                                     string thismtsn = strRecive.Substring(0, strRecive.Length - 2);
                                     if (bakmtsn.Equals(thismtsn))
                                     {
-                                        cdevice.Skt.Send(Encoding.UTF8.GetBytes(cdevice.Cmderr));  //NG指令  NOREAD or SN重复等未知情况停机 OUT2
+                                        cdevice.Skt.Send(Encoding.UTF8.GetBytes(cdevice.Cmderr));  //NG指令  NOREAD or SN重复等未知情况停机 OUT2                                        
                                     }
                                     else
                                     {
@@ -382,12 +384,13 @@ namespace 包装后段测试
                                         #region 数据库为主，盘片为辅，输出三种状态，和相关卡夹和贴单等信息
                                         string mtsnfront, brandname; Result_back.LabelNumber checkFlg;
                                         Result_back.LabelResult resprocess = number_labeltopaste(strRecive, out mtsnfront, out brandname, out checkFlg);
-                                        if (resprocess == Result_back.LabelResult.normal)
+                                        if (resprocess == Result_back.LabelResult.normal)                                        
                                         {
-                                            if (queue_firstinsert("teauto.autoscanlabel", mtsnfront, brandname, (int)checkFlg))      //写入数据库要判断返回成功  
+                                            if (queue_firstinsert("teauto.autoscanlabel", mtsnfront, brandname, (int)checkFlg))      //写入数据库要判断返回成功                                              
                                             {
                                                 cdevice.Skt.Send(Encoding.UTF8.GetBytes(cdevice.Cmdqty));   //OK指令  Pass   OUT1                                               
                                                 if (verticalbank_insert(mtsnfront))
+                                                
                                                 {
                                                     Console.WriteLine("立库存储过程执行成功!");
                                                 }
@@ -420,6 +423,7 @@ namespace 包装后段测试
                                             ListReload();
                                             cnt = 0;
                                         }
+                                        Console.WriteLine("end to head");
                                     }
                                 }
                                 #endregion
@@ -429,6 +433,7 @@ namespace 包装后段测试
                                 {
                                     cdevice.strLabel = strRecive;
                                     processLabel(cdevice);        //阻塞数据接收                                   
+                                    Console.WriteLine("结束processlabel出来");
                                 }
                                 #endregion
 
@@ -883,7 +888,7 @@ namespace 包装后段测试
                 {
                     Console.WriteLine("发送机器人贴标指令失败!Retry数:" + retrytimes + "次!" + DateTime.Now.ToString());
                     File.AppendAllText("cmdinfo.log", "\r\n发送机器人贴标指令失败!STR不能发送贴标指令!Retry数:" + retrytimes + "次," + DateTime.Now.ToString(), Encoding.Default);
-                    if (++retrytimes <= 9)
+                    if (++retrytimes <= 4) //临时改时间等待
                     {
                         Thread.Sleep(1000 * retrytimes);
                         goto Retry;
@@ -1604,7 +1609,7 @@ namespace 包装后段测试
             MySqlConnection conn = new MySqlConnection(MySqlStringteauto);
 
             //string SqlCmdString = string.Format("INSERT INTO {0}(MTSN,DTimeFirst,TrayType,CartonLabel) VALUES('{1}','{2}','{3}','{4}')", tabname, mtsn, DateTime.Now.ToString("yyyyMMddHHmmss"), brandname, cartonqty);
-            string SqlCmdString = string.Format("INSERT INTO {0}(MTSN,DTimeFirst,TrayType,CartonLabel,Line,Date_Time) VALUES('{1}','{2}','{3}','{4}','KIT202','{5}')", tabname, mtsn, DateTime.Now.ToString("yyyyMMddHHmmss"), brandname, cartonqty, DateTime.Now.ToString());
+            string SqlCmdString = string.Format("INSERT INTO {0}(MTSN,DTimeFirst,TrayType,CartonLabel,Line,Date_Time,DTimeThird) VALUES('{1}','{2}','{3}','{4}','KIT202','{5}','{6}')", tabname, mtsn, DateTime.Now.ToString("yyyyMMddHHmmss"), brandname, cartonqty, DateTime.Now.ToString(), "PRINT");
 
             try
             {
