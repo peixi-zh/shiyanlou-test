@@ -635,3 +635,10 @@ C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后�
 C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.pdb
 C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe.CodeAnalysisLog.xml
 C:\Users\Administrator\OneDrive - Lenovo\公司项目\NB改造升级\包装后段测试\bin\Debug\AutoPack.exe.lastcodeanalysissucceeded
+\\10.186.242.87\Users\gwsnt\Desktop\NBAuto\包装后段测试\bin\Debug\AutoPack.exe.config
+\\10.186.242.87\Users\gwsnt\Desktop\NBAuto\包装后段测试\bin\Debug\AutoPack.exe
+\\10.186.242.87\Users\gwsnt\Desktop\NBAuto\包装后段测试\bin\Debug\AutoPack.pdb
+\\10.186.242.87\Users\gwsnt\Desktop\NBAuto\包装后段测试\obj\Debug\包装后段测试.csprojAssemblyReference.cache
+\\10.186.242.87\Users\gwsnt\Desktop\NBAuto\包装后段测试\obj\Debug\包装后段测试.csproj.CopyComplete
+\\10.186.242.87\Users\gwsnt\Desktop\NBAuto\包装后段测试\obj\Debug\AutoPack.exe
+\\10.186.242.87\Users\gwsnt\Desktop\NBAuto\包装后段测试\obj\Debug\AutoPack.pdb

@@ -53,17 +53,17 @@ namespace 包装后段测试
         static Cdevice[] Cdeviceobj = new Cdevice[]
         {
 
-            new Cdevice("scanner_getweight",null,IPAddress.Parse("10.186.242.14"),false,"OK\r\n","NG\r\n")                                        //后段称重
-            ,
-            new Cdevice("robot_sealing",null,IPAddress.Parse("10.186.242.18"),false,"1,0,1,0,0,0,0,0,0,0,0,0,0,CR", "1,0,1,0,0,0,0,0,0,0,0,0,0,CR")    //贴检封robot
-            ,
+           // new Cdevice("scanner_getweight",null,IPAddress.Parse("10.186.242.14"),false,"OK\r\n","NG\r\n")                                        //后段称重
+          //  ,
+           // new Cdevice("robot_sealing",null,IPAddress.Parse("10.186.242.18"),false,"1,0,1,0,0,0,0,0,0,0,0,0,0,CR", "1,0,1,0,0,0,0,0,0,0,0,0,0,CR")    //贴检封robot
+          //  ,
             new Cdevice("scanner_athead",null,IPAddress.Parse("10.186.242.83"),false,"OK\r\n","NG\r\n")                                          //前段Scanner
-            ,           
-            new Cdevice("robot_catonlabel",null,IPAddress.Parse("10.186.242.88"),false,"1,CR","2,CR")                                              //贴标robot
-           ,
-            new Cdevice("scanner_afterlabeling",null,IPAddress.Parse("10.186.242.79"),false,"OK\r\n","NG\r\n")                                              //贴标后扫描枪校验
-            ,
-            new Cdevice("printer",null,IPAddress.Parse("10.186.242.80"),false,"OK\r\n","NG\r\n")                                              //打印机            
+           // ,           
+           // new Cdevice("robot_catonlabel",null,IPAddress.Parse("10.186.242.88"),false,"1,CR","2,CR")                                              //贴标robot
+          // ,
+          //  new Cdevice("scanner_afterlabeling",null,IPAddress.Parse("10.186.242.79"),false,"OK\r\n","NG\r\n")                                              //贴标后扫描枪校验
+          //  ,
+          //  new Cdevice("printer",null,IPAddress.Parse("10.186.242.80"),false,"OK\r\n","NG\r\n")                                              //打印机            
         };
 
         const int BURFERSIZE = 128;     //接受的数据缓冲区大小
@@ -1011,6 +1011,10 @@ namespace 包装后段测试
                     {
                         brandname = "T490s";
                     }
+                    else if (brandname.Equals("20Q1") || brandname.Equals("20NC"))
+                    {
+                        brandname = "X390s";
+                    }//暂时增加
                     else
                     {
                         checkFlg = Result_back.LabelNumber.no_labeling;  //MTM not pick
